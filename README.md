@@ -19,13 +19,20 @@ A **portfolio-grade, enterprise-style SaaS Admin Dashboard** built with:
 - ✅ Created enterprise-ready folder structure:
 
 src/
-app/ # routing, layouts, page entry points
-components/ # UI & reusable components (layout, ui, charts)
-hooks/ # custom React hooks (auth, permissions)
-lib/ # app-wide setup (React Query client, auth helpers)
-services/ # API calls (auth, users, reports)
-types/ # shared TypeScript types
-utils/ # helper functions and constants
+
+- app/ # routing, layouts, page entry points
+
+-components/ # UI & reusable components (layout, ui, charts)
+
+-hooks/ # custom React hooks (auth, permissions)
+
+-lib/ # app-wide setup (React Query client, auth helpers)
+
+-services/ # API calls (auth, users, reports)
+
+-types/ # shared TypeScript types
+
+-utils/ # helper functions and constants
 
 - ✅ Base README created
 - ✅ Dev server running at [http://localhost:3000]
