@@ -1,167 +1,127 @@
-Enterprise SaaS Admin Dashboard
+# 🧩 Enterprise SaaS Admin Dashboard
 
-A portfolio-grade, enterprise-style SaaS Admin Dashboard built with:
+A **portfolio-grade, enterprise-style SaaS Admin Dashboard** built to demonstrate real-world frontend architecture, authentication, and scalable state management.
 
+---
 
-Next.js (App Router)
+## 🛠️ Tech Stack
 
+- **Next.js** (App Router)
+- **React & TypeScript**
+- **Tailwind CSS**
+- **React Query (TanStack)**
+- **JWT Authentication**
+- **Role-Based Access Control (RBAC)**
 
-React & TypeScript
+---
 
+## 🏗️ Project Status
 
-Tailwind CSS
+### ✅ Tickets 1, 2, 3, 4 & 5 — Completed
 
+This project is actively developed using a ticket-based, enterprise-style workflow.
 
-React Query (TanStack)
+---
 
+## 📌 What’s Done So Far
 
-JWT Authentication & Role-Based Access Control (RBAC)
+---
 
+### ✅ Ticket 1 % 2 — Project Setup & Dashboard Layout
 
+- Initialized **Next.js** project with **TypeScript** & **Tailwind CSS**
+- Configured **ESLint** & **Prettier** for professional code formatting
+- Designed an enterprise-ready folder structure:
 
-🏗️ Project Status — Tickets 2, 3, 4 & 5 Completed
+  src/  
+  ├─ app/                 # App Router pages, layouts, route groups  
+  │  ├─ (auth)/           # Login & auth routes  
+  │  ├─ (dashboard)/      # Protected dashboard routes  
+  │  └─ api/              # Next.js route handlers (mock backend)  
+  ├─ components/          # Reusable UI components (Sidebar, Topbar, Loader)  
+  ├─ context/             # Auth context  
+  ├─ hooks/               # Custom hooks (useAuth, useUsers, etc.)  
+  ├─ lib/  
+  │  ├─ apiClient.ts      # Central API abstraction  
+  │  └─ apis/             # Domain-specific API files  
+  ├─ services/            # Mock services & fake backend logic  
+  ├─ types/               # Shared TypeScript types  
+  └─ utils/               # Helpers & constants  
 
-What’s done so far:
 
-✅ Project Setup & Dashboard Layout (Ticket 2)
+- Implemented a full dashboard layout:
+  - Persistent sidebar & topbar
+  - Active route highlighting
+  - Scrollable main content area
+  - Sticky topbar
+  - Responsive sidebar (tablet support)
+- Route groups for clean architecture:
+  - `(auth)` → authentication pages
+  - `(dashboard)` → protected dashboard pages
+- Root redirect: `/ → /login`
+- UX polish for a real SaaS feel
 
-Initialized Next.js project with TypeScript and Tailwind CSS
+---
 
+### ✅ Ticket 3 & 4 — Authentication & Role-Based Access Control
 
-Configured ESLint & Prettier for professional code formatting
+- Login flow with **mock JWT authentication**
+- Centralized **Auth Context** for user & token state
+- Protected routes using a `ProtectedRoute` component
+- Role-Based Access Control (RBAC):
+  - **Admin** → Full access
+  - **Manager** → Limited access
+  - **Viewer** → Read-only access
+- Sidebar navigation dynamically filtered by user role
+- Unauthorized access is blocked or redirected
+- Middleware & cookie-based token storage prepared for real APIs
 
+---
 
-Created enterprise-ready folder structure:
+### ✅ Ticket 5 — React Query & API Layer Setup
 
+- Configured `QueryClientProvider` at the app root
+- Created a reusable `apiClient` abstraction for fetch calls
+- Global loading & error handling via `GlobalLoader`
+- Mock API endpoints using **Next.js API Routes**
+- `useUsers` hook demonstrates server-state fetching with React Query
+- No direct `fetch` calls inside components  
+  → All server-state handled through **React Query**
 
-src/
+---
 
-├─ app/           # routing, layouts, page entry points
+## ⭐ Recruiter / Portfolio Highlights
 
-├─ components/    # UI & reusable components (Sidebar, Topbar, charts)
+- Modern **Next.js App Router** architecture
+- Real-world **role-based authentication & permissions**
+- Proper **server-state management** using React Query
+- Dashboard feels like a real product — not a tutorial
+- Clean, modular, and scalable folder organization
+- Strong separation of concerns (UI, hooks, services, state)
 
-├─ hooks/         # custom React hooks (auth, permissions)
+---
 
-├─ lib/           # app-wide setup (React Query client, auth helpers)
+## 🚀 Next Steps
 
-├─ services/      # API calls (auth, users, reports)
+### 🔜 Ticket 6 — CRUD Modules & Data Tables
 
-├─ types/         # shared TypeScript types
+- Users, Subscriptions & Reports modules
+- Full CRUD operations using React Query + API routes
+- Data tables with:
+  - Pagination
+  - Search
+  - Filters
+  - Sorting
+- Analytics & charts using **Recharts** or **Chart.js**
 
-├─ utils/         # helper functions and constants
+---
 
-Implemented dashboard layout with persistent sidebar and topbar
+## 💡 Notes
 
+- Fully **TypeScript-ready** & production-friendly codebase
+- ESLint & Prettier ensure consistent code quality
+- Local development server: http://localhost:3000
 
-Sidebar navigation with active route highlighting
-
-
-Scrollable main content, sticky topbar, responsive sidebar (tablet support)
-
-
-Route groups (auth) and (dashboard) for clean App Router structure
-
-
-Root redirect (/ → /login)
-
-
-UX polish for a real SaaS feel
-
-
-✅ Authentication & Role-Based Access (Ticket 3 & 4)
-
-Login flow with fake JWT authentication
-
-
-Auth context for user state & token
-
-
-Protected routes via ProtectedRoute component
-
-
-Role-based access control (RBAC):
-
-
-Admin: full access
-
-
-Manager: limited access
-
-
-Viewer: read-only access
-
-
-Sidebar items filtered by role
-
-
-Unauthorized users are redirected or blocked
-
-
-Middleware & cookie-based token storage prepared for real API
-
-
-✅ React Query & API Layer Setup (Ticket 5)
-
-Configured QueryClientProvider globally
-
-
-Created apiClient abstraction for fetch calls
-
-
-Global error handling and loader via GlobalLoader
-
-
-Mock API endpoints implemented in Next.js API routes
-
-
-useUsers hook demonstrates fetching data via React Query
-
-
-No direct fetch calls in components — all server-state handled through React Query
-
-
-Recruiter / Portfolio Highlights:
-
-Shows modern Next.js App Router architecture
-
-
-Implements role-based authentication & permissions
-
-
-Demonstrates server-state management with React Query
-
-
-Dashboard feels like a real product, not a tutorial
-
-
-Clean, modular, scalable folder organization
-
-
-
-🚀 Next Steps
-
-Ticket 6: CRUD Modules & Tables
-
-Implement Users, Subscriptions, Reports pages
-
-
-CRUD operations via React Query + API
-
-
-Data tables with pagination, search, filters, sorting
-
-
-Charts with Recharts / Chart.js for analytics
-
-
-
-💡 Notes
-
-All code is TypeScript-ready and production-friendly
-
-
-ESLint & Prettier ensure consistent, clean code
-
-
-Dev server running at http://localhost:3000
+  
+---
 
