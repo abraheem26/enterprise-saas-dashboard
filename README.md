@@ -17,7 +17,7 @@ A **portfolio-grade, enterprise-style SaaS Admin Dashboard** built to demonstrat
 
 ## 🏗️ Project Status
 
-### ✅ Tickets 1, 2, 3, 4 & 5 — Completed
+### ✅ Tickets 1 - 6 Completed
 
 This project is actively developed using a ticket-based, enterprise-style workflow.
 
@@ -27,7 +27,7 @@ This project is actively developed using a ticket-based, enterprise-style workfl
 
 ---
 
-### ✅ Ticket 1 % 2 — Project Setup & Dashboard Layout
+### ✅ Ticket 1 & 2 — Project Setup & Dashboard Layout
 
 - Initialized **Next.js** project with **TypeScript** & **Tailwind CSS**
 - Configured **ESLint** & **Prettier** for professional code formatting
@@ -90,6 +90,17 @@ This project is actively developed using a ticket-based, enterprise-style workfl
 
 ---
 
+### ✅ Ticket 6 — Reusable Data Table Component
+
+Create a generic DataTable component supporting pagination, loading, and empty states.
+
+- Table layout & columns config
+- Pagination controls
+- Loading skeleton
+- Empty state UI
+
+---
+
 ## ⭐ Recruiter / Portfolio Highlights
 
 - Modern **Next.js App Router** architecture
@@ -103,16 +114,14 @@ This project is actively developed using a ticket-based, enterprise-style workfl
 
 ## 🚀 Next Steps
 
-### 🔜 Ticket 6 — CRUD Modules & Data Tables
+### 🔜 Ticket 7 — Users Module (Admin CRUD)
 
-- Users, Subscriptions & Reports modules
-- Full CRUD operations using React Query + API routes
-- Data tables with:
-  - Pagination
-  - Search
-  - Filters
-  - Sorting
-- Analytics & charts using **Recharts** or **Chart.js**
+Implement Users module with full CRUD operations for Admin role.
+
+- Users list page
+- Create/Edit user modal
+- Delete confirmation
+- Mock API integration
 
 ---
 
