@@ -17,7 +17,7 @@ A **portfolio-grade, enterprise-style SaaS Admin Dashboard** built to demonstrat
 
 ## 🏗️ Project Status
 
-### ✅ Tickets 1 - 6 Completed
+### ✅ Tickets 1 - 7 Completed
 
 This project is actively developed using a ticket-based, enterprise-style workflow.
 
@@ -34,20 +34,19 @@ This project is actively developed using a ticket-based, enterprise-style workfl
 - Designed an enterprise-ready folder structure:
 
   src/  
-  ├─ app/                 # App Router pages, layouts, route groups  
-  │  ├─ (auth)/           # Login & auth routes  
-  │  ├─ (dashboard)/      # Protected dashboard routes  
-  │  └─ api/              # Next.js route handlers (mock backend)  
-  ├─ components/          # Reusable UI components (Sidebar, Topbar, Loader)  
-  ├─ context/             # Auth context  
-  ├─ hooks/               # Custom hooks (useAuth, useUsers, etc.)  
+  ├─ app/ # App Router pages, layouts, route groups  
+  │ ├─ (auth)/ # Login & auth routes  
+  │ ├─ (dashboard)/ # Protected dashboard routes  
+  │ └─ api/ # Next.js route handlers (mock backend)  
+  ├─ components/ # Reusable UI components (Sidebar, Topbar, Loader)  
+  ├─ context/ # Auth context  
+  ├─ hooks/ # Custom hooks (useAuth, useUsers, etc.)  
   ├─ lib/  
-  │  ├─ apiClient.ts      # Central API abstraction  
-  │  └─ apis/             # Domain-specific API files  
-  ├─ services/            # Mock services & fake backend logic  
-  ├─ types/               # Shared TypeScript types  
-  └─ utils/               # Helpers & constants  
-
+  │ ├─ apiClient.ts # Central API abstraction  
+  │ └─ apis/ # Domain-specific API files  
+  ├─ services/ # Mock services & fake backend logic  
+  ├─ types/ # Shared TypeScript types  
+  └─ utils/ # Helpers & constants
 
 - Implemented a full dashboard layout:
   - Persistent sidebar & topbar
@@ -101,6 +100,17 @@ Create a generic DataTable component supporting pagination, loading, and empty s
 
 ---
 
+### ✅ Ticket 7 — Users Module (Admin CRUD)
+
+Implement Users module with full CRUD operations for Admin role.
+
+- Users list page
+- Create/Edit user modal
+- Delete confirmation
+- Mock API integration
+
+---
+
 ## ⭐ Recruiter / Portfolio Highlights
 
 - Modern **Next.js App Router** architecture
@@ -114,14 +124,13 @@ Create a generic DataTable component supporting pagination, loading, and empty s
 
 ## 🚀 Next Steps
 
-### 🔜 Ticket 7 — Users Module (Admin CRUD)
+### 🔜 Ticket 8 — Table Search, Filters & Sorting
 
-Implement Users module with full CRUD operations for Admin role.
+Enhance DataTable with search, amd filters using query keys.
 
-- Users list page
-- Create/Edit user modal
-- Delete confirmation
-- Mock API integration
+- Search Input
+- Filters
+- Query Key strategy
 
 ---
 
@@ -131,6 +140,4 @@ Implement Users module with full CRUD operations for Admin role.
 - ESLint & Prettier ensure consistent code quality
 - Local development server: http://localhost:3000
 
-  
 ---
-

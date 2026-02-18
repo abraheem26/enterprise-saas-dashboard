@@ -1,5 +1,5 @@
+import { MOCK_USERS } from '@/lib/mockDb'
 import { NextResponse } from 'next/server'
-import { MOCK_USERS } from '@/services/auth.service'
 
 export async function GET(req: Request) {
   const authHeader = req.headers.get('authorization')
@@ -52,4 +52,17 @@ export async function GET(req: Request) {
     totalPages,
     totalRecords,
   })
+}
+
+export async function POST(req: Request) {
+  const body = await req.json()
+
+  const newUser = {
+    id: Date.now().toString(),
+    ...body,
+  }
+
+  MOCK_USERS.push(newUser)
+
+  return NextResponse.json(newUser)
 }

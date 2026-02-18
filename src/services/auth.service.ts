@@ -1,28 +1,5 @@
+import { MOCK_USERS } from '@/lib/mockDb'
 import { AuthResponse } from '@/types/auth'
-
-export const MOCK_USERS = [
-  {
-    id: '1',
-    name: 'Admin User',
-    email: 'admin@demo.com',
-    password: 'admin123',
-    role: 'admin',
-  },
-  {
-    id: '2',
-    name: 'Manager User',
-    email: 'manager@demo.com',
-    password: 'manager123',
-    role: 'manager',
-  },
-  {
-    id: '3',
-    name: 'Viewer User',
-    email: 'viewer@demo.com',
-    password: 'viewer123',
-    role: 'viewer',
-  },
-]
 
 export async function loginService(
   email: string,

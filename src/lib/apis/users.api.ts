@@ -29,3 +29,29 @@ export const fetchUsers = async (
     { token }
   )
 }
+
+//CREATE USER
+export const createUser = async (data: Partial<User>): Promise<User> => {
+  return apiClient<User>('/api/users', {
+    method: 'POST',
+    body: data,
+  })
+}
+
+// UPDATE USER
+export const updateUser = async (
+  id: string,
+  data: Partial<User>
+): Promise<User> => {
+  return apiClient<User>(`/api/users/${id}`, {
+    method: 'PUT',
+    body: data,
+  })
+}
+
+// DELETE USER
+export const deleteUser = async (id: string): Promise<void> => {
+  return apiClient<void>(`/api/users/${id}`, {
+    method: 'DELETE',
+  })
+}
